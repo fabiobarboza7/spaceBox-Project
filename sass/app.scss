@@ -1,0 +1,31 @@
+$primary-color: #4DD1D1;
+$second-color: #123A46;
+$primary-font: "Open Sans";
+$nav-text-color: #fff;
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: $primary-font;
+}
+
+header {
+  background: linear-gradient(50deg,$primary-color,$second-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header > img {
+	width: 112px;
+}
+
+ul > li {
+	display: inline;
+	font-size: 0.8em;
+	padding-left: 2em;
+	color: $nav-text-color;
+}

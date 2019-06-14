@@ -1,3 +1,23 @@
+html {
+  box-sizing: border-box; }
 
+body {
+  margin: 0;
+  font-family: "Open Sans"; }
+
+header {
+  background: linear-gradient(50deg, #4DD1D1, #123A46);
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+header > img {
+  width: 112px; }
+
+ul > li {
+  display: inline;
+  font-size: 0.8em;
+  padding-left: 2em;
+  color: #fff; }
 
 /*# sourceMappingURL=app.css.map */
