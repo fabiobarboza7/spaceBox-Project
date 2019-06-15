@@ -46,6 +46,7 @@ ul > li {
   .cards {
     grid-template-columns: 1fr 1fr 1fr; } }
 .card {
+  background-color: #fff;
   height: 5em;
   padding: 1em;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
@@ -55,6 +56,18 @@ ul > li {
   .card p {
     margin-left: 10px;
     color: grey; }
+
+.card:hover {
+  cursor: pointer;
+  background-color: #002B50; }
+  .card:hover p, .card:hover b {
+    color: #fff; }
+
+.card-checked {
+  cursor: pointer;
+  background-color: #002B50; }
+  .card-checked p, .card-checked b {
+    color: #fff; }
 
 .circle {
   display: flex;
@@ -77,8 +90,5 @@ ul > li {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
-
-.bg-white {
-  background-color: #fff; }
 
 /*# sourceMappingURL=app.css.map */

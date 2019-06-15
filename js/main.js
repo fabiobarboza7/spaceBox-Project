@@ -6,13 +6,9 @@ const getData = async () => {
 
 const data = getData();
 data.then(function(user_data){
-	let id = 0;
 	$(user_data).each(function() {
-		id++;
-		this.id = id;
 		$("#users").append(
-		  `<div class="card card-align bg-white">
-
+		  `<div class="card card-align" id="user${this.id}">
 	      <img src="${this.foto}" alt="">
 	      <div>
 	      <div class="circle"><span>${this.id}</span></div>
@@ -23,19 +19,21 @@ data.then(function(user_data){
 	      </div>
 	    </div>`
 		);
+		let that = this;
+		$(`#user${this.id}`).on('click', function(){
+			$(this).toggleClass('card-checked').siblings().removeClass('card-checked');
+			$("#selected-user").html(
+				`<div class="card card-align">
+		      <img src="${that.foto}" alt="">
+		      <div>
+		        <p>
+		          NOME: <b>${that.nome}</b><br />
+		          CARDO: <b>${that.cargo}</b><br />
+		          IDADE: <b>${that.idade}</b>
+		        </p>
+		      </div>
+		    </div>`
+			).hide().fadeIn();		
+		});
 	});	  
-
-	$("#selected-user").prepend(
-		`<div class="card card-align bg-white">
-      <img src="${this.foto}" alt="">
-      <div>
-        <p>
-          <b>${this.nome}</b><br />
-          ${this.cargo}
-        </p>
-      </div>
-    </div>`
-	);
 });
-
-
