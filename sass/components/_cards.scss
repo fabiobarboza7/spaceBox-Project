@@ -1,0 +1,102 @@
+@import 'variables';
+
+@mixin flex($type, $horizon, $vertical) {
+  display: $type;
+  justify-content: $horizon;
+  align-items: $vertical;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  margin: 1em 15%;
+}
+
+
+.card {
+  background-color: #fff;
+  height: 5em;
+  padding: 1em;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  b {
+    color: #000;
+  }
+  p {
+    margin-left: 0.6em;
+    color: grey;
+  }
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: $active-color;
+  p, b {
+    color: #fff;
+  }
+}
+
+.card-checked {
+  cursor: pointer;
+  background-color: $active-color;
+  p, b {
+    color: #fff;
+  }
+}
+
+.card > img {
+  width: 4.3em;
+  height: 4.3em;
+  border-radius: 50%;
+}
+
+.card-align {
+  @include flex(flex, flex-start, center);
+}
+
+.circle {
+  @include flex(flex, center, center);
+  position: relative;
+  right: 1em;
+  top: 0.6em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: $primary-color;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

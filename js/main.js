@@ -1,11 +1,14 @@
+// Getting data from fakeDb. Need user http, so that locahost server at least
 const getData = async () => {
   const req = await fetch('./../db/data.json');
   const res = await req.json();  
   return res;
 }
 
+// Handle data after promise return
 const data = getData();
 data.then(function(user_data){
+	// Using some jQuery just to make a cleanar code instead a lot of createElement("[...]")
 	$(user_data).each(function() {
 		$("#users").append(
 		  `<div class="card card-align" id="user${this.id}">
@@ -19,6 +22,7 @@ data.then(function(user_data){
 	      </div>
 	    </div>`
 		);
+		// saving the `this` context
 		let that = this;
 		$(`#user${this.id}`).on('click', function(){
 			$(this).toggleClass('card-checked').siblings().removeClass('card-checked');

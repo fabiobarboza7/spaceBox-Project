@@ -1,0 +1,32 @@
+@import 'variables';
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: $primary-font;
+	background-color: $bg-grey;
+}
+
+header {
+  background: linear-gradient(50deg,$primary-color,$second-color);
+  @include flex(flex, space-around, center);
+  padding: 0.5em;
+
+  img {
+		width: 7em;
+	}
+}
+
+ul > li {
+	display: inline;
+	font-size: 0.8em;
+	padding-left: 2em;
+	color: $nav-text-color;
+}
+
+#selected-user {
+	margin: 1em 15%;
+}
