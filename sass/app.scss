@@ -1,3 +1,4 @@
+$bg-grey: #eee;
 $primary-color: #4DD1D1;
 $second-color: #123A46;
 $nav-text-color: #fff;
@@ -11,6 +12,7 @@ html {
 body {
 	margin: 0;
 	font-family: $primary-font;
+	background-color: $bg-grey;
 }
 
 header {
@@ -99,6 +101,18 @@ ul > li {
 	}
 }
 
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  position: relative;
+  right: 15px;
+  top: 9px;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 50%;
+	background-color: $primary-color;
+}
 
 .card > img {
 	width: 70px;
@@ -113,14 +127,6 @@ ul > li {
 
 }
 
-.bg-lightgrey {
-	background-color: #eee;
-}
-
 .bg-white {
 	background-color: #fff;
-}
-
-.bg-red {
-	background-color: #ff0000;
 }

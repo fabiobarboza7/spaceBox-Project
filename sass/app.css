@@ -3,7 +3,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  background-color: #eee; }
 
 header {
   background: linear-gradient(50deg, #4DD1D1, #123A46);
@@ -55,6 +56,18 @@ ul > li {
     margin-left: 10px;
     color: grey; }
 
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 15px;
+  top: 9px;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: #4DD1D1; }
+
 .card > img {
   width: 70px;
   height: 70px;
@@ -65,13 +78,7 @@ ul > li {
   justify-content: flex-start;
   align-items: center; }
 
-.bg-lightgrey {
-  background-color: #eee; }
-
 .bg-white {
   background-color: #fff; }
-
-.bg-red {
-  background-color: #ff0000; }
 
 /*# sourceMappingURL=app.css.map */

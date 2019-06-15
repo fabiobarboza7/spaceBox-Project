@@ -12,8 +12,10 @@ data.then(function(user_data){
 		this.id = id;
 		$("#users").append(
 		  `<div class="card card-align bg-white">
+
 	      <img src="${this.foto}" alt="">
 	      <div>
+	      <div class="circle"><span>${this.id}</span></div>
 	        <p>
 	          <b>${this.nome}</b><br />
 	          ${this.cargo}
