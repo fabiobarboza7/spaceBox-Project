@@ -1,7 +1,8 @@
 $primary-color: #4DD1D1;
 $second-color: #123A46;
-$primary-font: "Open Sans";
 $nav-text-color: #fff;
+$active-color: #002B50;
+$primary-font: "Open Sans";
 
 html {
 	box-sizing: border-box;
@@ -17,10 +18,11 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+  padding: 0.5em;
 
-header > img {
-	width: 112px;
+  img {
+		width: 112px;
+	}
 }
 
 ul > li {
@@ -28,4 +30,97 @@ ul > li {
 	font-size: 0.8em;
 	padding-left: 2em;
 	color: $nav-text-color;
+}
+
+//test
+.cards {
+  // display: grid;
+  // grid-template-columns: 3fr 3fr 3fr;
+  // grid-gap: 1em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  margin: 1em 15%;
+}
+
+#selected-user {
+	margin: 1em 15%;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+	height: 5em;
+	padding: 1em;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	b {
+		color: #000;
+	}
+	p {
+		margin-left: 10px;
+		color: grey;
+	}
+}
+
+
+.card > img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+
+.card-align {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+.bg-lightgrey {
+	background-color: #eee;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+.bg-red {
+	background-color: #ff0000;
 }
